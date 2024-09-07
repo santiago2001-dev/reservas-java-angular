@@ -1,0 +1,53 @@
+
+
+<app-sidebar></app-sidebar>
+<table class="table table-dark table-hover "  style="width:  50%;">
+    <thead>
+      <tr>
+            
+        <th scope="col">ID</th>
+        <th scope="col">USUARIO QUE RESERVA</th>
+        <th scope="col">FECHA</th>
+        <th scope="col">ESTADO</th>
+        <th scope="col"> ACCION</th>
+    
+  
+       
+
+        
+
+
+    </thead>
+    <tbody >
+      <tr *ngFor="let reserva of listReserva">
+        
+    
+        <td scope="col">{{reserva.id}}</td>
+        <td scope="row">{{reserva.id_user}}</td>
+        <td scope="row">{{reserva.fecha}}</td>
+        <td scope="row">
+          <span *ngIf="reserva.estado; else inactivo">Activo</span>
+          <ng-template #inactivo>Inactivo</ng-template>
+        </td>
+            
+        
+        <td>
+          <div class="options">
+            <button class="btn btn-light" routerLink="/add">NUEVO</button>
+    
+            <br>
+            <br>
+            <i [routerLink]="['/update/',(reserva.id)]" class="btn btn-primary">ACTUALIZAR</i>
+            <br>
+            <br>
+            <i  (click)="deleteProduct(reserva.id)" class="btn btn-danger">ELIMINAR</i>
+          </div>
+         
+        </td>
+
+      </tr>
+
+    </tbody>
+      
+
+  </table>

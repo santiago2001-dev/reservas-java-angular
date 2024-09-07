@@ -1,0 +1,51 @@
+<br>
+<div class="container mt-5" id="fondo">
+    <h2 class="title"> {{Titulo}}</h2>
+
+
+    <br>
+    <form class="form" [formGroup]="reservaForm" (submit)="createReserva()">
+
+
+        <div class="container mb-3">
+
+            <div>
+                <select   class="form-control"  id="usuario" formControlName="id_user">
+                  <option value="" disabled>Selecciona un usuario</option>
+                  <option *ngFor="let user of users" [value]="user.id">{{ user.nombres }}</option>
+                </select>
+              </div>
+
+        </div>
+        <div class="container mb-3">
+
+            <input type="date" formControlName="fecha" class="form-control" placeholder="Nombre de producto" required>
+
+        </div>
+
+
+
+        <div class="container mb-3">
+
+            <label for="isChecked">
+                <input  type="checkbox" formControlName="estado">
+                estado de reserva
+            </label>
+        
+        </div>
+
+        
+
+
+
+
+
+        <div class="container mb-3">
+            <button class="btn btn-dark btn-sm"> Enviar</button>
+            <button style="margin-left: 5px;" class="btn btn-dark btn-sm" routerLink="/"> Volver</button>
+
+        </div>
+
+        <br>
+    </form>
+</div>
