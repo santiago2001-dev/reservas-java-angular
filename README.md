@@ -15,8 +15,7 @@ Esta es una aplicación full-stack que utiliza Angular para el frontend y Spring
 
 1. **Node.js** (v14 o superior) - [Descargar e Instalar Node.js](https://nodejs.org/)
 2. **Java JDK** (v11 o superior) - [Descargar e Instalar JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
-3. **Maven** - [Descargar e Instalar Maven](https://maven.apache.org/download.cgi)
-4. **PostgreSQL** - [Descargar e Instalar PostgreSQL](https://www.postgresql.org/download/)
+
 
 ## Configuración
 1. abre la carpeta frontend y ejecuta el proyecto npm i para instalar las dependencias
